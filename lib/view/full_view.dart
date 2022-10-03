@@ -18,12 +18,14 @@ class _FullViewState extends State<FullView> {
     try {
       String url = widget.imageURL;
       int location = WallpaperManager
-          .BOTH_SCREEN; // or location = WallpaperManager.LOCK_SCREEN;
+          .BOTH_SCREEN;
       var file = await DefaultCacheManager().getSingleFile(url);
       final bool result =
           await WallpaperManager.setWallpaperFromFile(file.path, location);
       print(result);
-    } on PlatformException {}
+    } on PlatformException {
+    print("Error Log");
+    }
   }
   
   @override
