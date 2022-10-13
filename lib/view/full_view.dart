@@ -48,7 +48,6 @@ class _FullViewState extends State<FullView> {
             child: InkWell(
               onTap: () {
                 setWallpaper();
-                //    loadMore();
               },
               child: Center(
                 child: Text(
